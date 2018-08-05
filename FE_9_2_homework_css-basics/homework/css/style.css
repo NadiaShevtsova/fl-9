@@ -1,0 +1,161 @@
+/* 
+
+write your code here
+
+*/
+/*Thiangle*/
+ section::before, .margin-b-10::before{
+     content: "";
+     position: absolute;
+     border: 20px solid transparent;
+     border-width: 15px 100px 0 0;
+     border-color: #31b0d5 transparent;
+}
+/*boxes*/
+ .tm-box-bg-title:hover{
+     background: #31b0d5;
+}
+ .tm-section-title-box, .tm-section-title-box:hover{
+     font-size: 300%;
+}
+ .tm-section-title-box:hover{
+     color: white;
+     font-weight: bold;
+}
+ .thumbnail{
+     border-radius: 50%;
+}
+/*First letters*/
+ div>p::first-letter{
+     color: #76cdd7;
+     font-size:30px;
+}
+ .flex-item p{
+     text-indent: 1.5em;
+}
+/*shadow for all blocks*/
+ .tm-content-box, .tm-sidebar{
+     box-shadow: 0 0 20px gray;
+}
+/*blocks-How We Do It*/
+ #ideas .flex-item>.tm-section-title{
+     color: gainsboro;
+     letter-spacing: 5px;
+}
+ h2+p{
+     font-style: italic;
+}
+/*We Are*/
+ .heading h2{
+     text-align: center;
+     color: #71cfda;
+}
+ .heading a:visited{
+     color: silver;
+}
+ .heading a:hover{
+     color: #71cfda;
+     text-decoration-style: double;
+}
+ a.text::after{
+     content:"New";
+     vertical-align: super;
+     color: red;
+     font-size: 10px;
+}
+ .heading a, .blocks>.tm-content-box p::first-letter{
+     color: black;
+}
+/*blocks*/
+ .blocks>.tm-content-box p{
+     font-size: 23px;
+}
+ .blocks>.tm-content-box h2{
+     font-size: 45px;
+}
+ .blocks>.tm-content-box li:nth-child(odd){
+     background:#f2f2f2;
+}
+/*sidebar*/
+ .tm-sidebar li{
+     border-bottom: 2px dotted silver;
+}
+ .tm-sidebar li:nth-child(4){
+     border-bottom: none;
+}
+ .tm-main-nav{
+     padding-top:0;
+     padding-bottom:0;
+}
+/*form*/
+ .form-control, .submit-btn{
+     color: red;
+}
+ .submit-btn:hover{
+     background: #31b0d5;
+	 border:none;
+}
+ .mandatory-field::after {
+     content: "*";
+     color: red;
+     font-weight: bold;
+}
+ @media print {
+    /*height where is logo*/
+     .tm-banner{
+         height:250px;
+    }
+    /*Triangle - none*/
+     section::before, .margin-b-10::before{
+         border: none;
+    }
+     .tm-sidebar, section:nth-child(n+3), #about{
+         display: none;
+    }
+    /*Alignment without sidebar*/
+     .tm-main-content{
+         margin-left: 0;
+         width: 100%;
+    }
+    /*between block where is logo and section "What We Do"*/
+     .tm-main-content>.tm-content-box{
+         margin-bottom: 0;
+    }
+    /*Text color "What We Do"*/
+     h2.tm-section-title{
+         color: #2b05ff;
+    }
+     .tm-team-description-container{
+         max-width: 100%;
+    }
+     .flex-2-col>.pad{
+         padding: 0 50px;
+    }
+     .flex-2-col{
+         margin: 0;
+         padding:0;
+         display: block;
+    }
+     .flex-item img{
+         margin: 0 auto;
+         display: block;
+    }
+    /*padding-bottom between img and footer*/
+     .flex-2-col>.flex-item:nth-child(2){
+         padding-bottom: 20px;
+    }
+    /*italic-none*/
+     h2+p{
+         font-style: normal;
+    }
+     div>p::first-letter{
+         color:black;
+         font-size: 100%;
+    }
+     div>p.tm-banner-text::first-letter{
+         color:#666;
+    }
+     .flex-item p{
+         text-indent: 0;
+    }
+}
