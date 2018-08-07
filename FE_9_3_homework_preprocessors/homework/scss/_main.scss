@@ -1,0 +1,167 @@
+@charset "UTF-8";
+@mixin marginTopBottom($marginTop, $marginBottom){
+	margin-top: $marginTop;
+	margin-bottom: $marginBottom;
+}
+@mixin styleForm($boxSizing, $width, $padding, $font-family, $background, $border){
+		box-sizing: $boxSizing;
+		width: $width;
+		padding: $padding;
+		font-family: $font-family;
+		background: $background;
+		border: $border;
+}
+body {
+	background: $contentBackground;
+	font-family: $styleText;
+}
+nav {
+	a {
+		text-transform: uppercase;
+		color: $colorText;
+		display: inline-block;
+		width: 26.27%;
+		text-align: center;
+		text-decoration: none;
+		margin: 18px;
+		font-size: 16px;
+	}
+	position: absolute;
+	bottom: 30px;
+	right: 0;
+	width: 63%;
+	border-bottom: 1px solid $colorBorder;
+	border-top: 1px solid $colorBorder;
+	float: left;
+}
+h3 {
+	text-transform: uppercase;
+	color: $styleTextSubhead;
+	@include marginTopBottom(5px, 5px);
+}
+h1 {
+	text-transform: uppercase;
+	color: $colorText;
+	text-align: right;
+	margin-bottom: 0;
+}
+button.btn {
+	text-transform: uppercase;
+	float: right;
+	padding: 10px 77px;
+	background: $colorText;
+	color: #ffffff;
+	border: none;
+}
+h4 {
+	color: $colorText;
+	@include marginTopBottom(5px, 5px);
+	margin-top: 0;
+	text-align: right;
+	margin-bottom: 20px;
+}
+.main-wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+header {
+	height: 230px;
+	position: relative;
+}
+.logo {
+	width: 37%;
+	height: 230px;
+	float: left;
+	img {
+		width: 100%;
+	}
+}
+.post-list {
+	float: left;
+	height: 100%;
+	margin-bottom: 7%;
+}
+article {
+	&:nth-child(odd) {
+		float: left;
+		clear: both;
+	}
+	&:nth-child(even) {
+		float: right;
+	}
+	background: $colorArticle;
+	margin-bottom: 4%;
+	width: 48%;
+	&:nth-child(n+5) {
+		margin-bottom: 0;
+	}
+	img {
+		width: 95.5%;
+		margin: 10px;
+		display: block;
+	}
+	img+div {
+		width: 95.5%;
+		margin-left: 10px;
+	}
+	div {
+		padding: 0 10px;
+		box-sizing: border-box;
+		padding-bottom: 20px;
+	}
+}
+.about {
+	img {
+		width: 100%;
+		display: block;
+	}
+	margin-bottom: 7%;
+	div {
+		display: block;
+	}
+}
+.toolbar {
+	height: 80px;
+	position: relative;
+	input {
+		&::placeholder {
+			color: $colorText;
+			opacity: 1;
+		}
+		position: absolute;
+		bottom: 20px;
+		right: 0;
+		padding: 10px 20px;
+		width: 152px;
+		border: 1px solid $colorText;
+		background: $contentBackground;
+	}
+}
+.post-description {
+	border-bottom: 1px solid $colorBorder;
+	padding-bottom: 10px;
+	color: $colorDateUnderImg;
+	font-size: 14px;
+}
+p {
+	margin-top: 0;
+	line-height: 1.5;
+	color: $colorP;
+}
+.form-group {
+	margin-bottom: 20px;
+	input {
+		@include styleForm (border-box, 100%, 15px, $styleText, $contentBackground, 1px solid $colorBorder);
+	}
+	textarea {
+		@include styleForm (border-box, 100%, 15px, $styleText, $contentBackground, 1px solid $colorBorder);
+		height: 120px;
+	}
+}
+footer {
+	clear: both;
+	font-size: 12px;
+}
+section.about {
+	clear: both;
+}
