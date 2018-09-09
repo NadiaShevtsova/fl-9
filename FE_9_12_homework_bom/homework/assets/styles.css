@@ -1,0 +1,52 @@
+.main-div {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    width: 400px;
+    margin: 100px auto;
+    padding: 10px;
+}
+
+.add-new-task-btn {
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin: 10px 40px;
+    padding: 0 15px;
+}
+
+.btn-cancel, .btn-save-changes {
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin: 10px 20px;
+    padding: 0 5px;
+}
+
+.todo-is-empty {
+    font-size: 1.2em;
+    padding: 10px 0;
+}
+
+.add-task {
+    width: 300px;
+    padding: 5px 10px;
+}
+
+.delete-btn, .check-btn {
+    border: 0;
+    padding: 0;
+    background: none;
+}
+
+.todo-list {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.list-item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 300px;
+}
